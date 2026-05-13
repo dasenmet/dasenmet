@@ -5,41 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DASEN ENTERPRISE LTD</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{
-            font-family:Arial,sans-serif;
-            background:#f9d22f;
-            color:#000;
-            height:100vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1{
-            font-size:42px;
-            font-weight:bold;
-            margin-bottom:10px;
+        body {
+            /* 参考站同款黄色背景 */
+            background: #f9d321;
+            color: #000;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            /* 🔥 关键：和参考网站完全一样的字体 */
+            font-family: Georgia, "Times New Roman", Times, serif;
         }
-        .subtitle{
-            font-size:18px;
-            margin-bottom:50px;
+
+        /* 公司名称（和参考站字体、大小、间距完全一致） */
+        h1 {
+            font-size: 46px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
         }
-        .arrow{
-            width:40px;
-            height:40px;
-            border-right:4px solid #000;
-            border-bottom:4px solid #000;
-            transform:rotate(45deg);
-            cursor:pointer;
-            animation:bounce 1.5s infinite;
+
+        /* 副标题（字体、大小、间距 1:1） */
+        .subtitle {
+            font-size: 19px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            margin-bottom: 60px;
         }
-        @keyframes bounce{
-            0%,100%{transform:rotate(45deg) translate(0,0);}
-            50%{transform:rotate(45deg) translate(10px,10px);}
+
+        /* 下滑箭头（和参考站同款样式 + 动画） */
+        .arrow {
+            width: 26px;
+            height: 26px;
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
+            transform: rotate(45deg);
+            animation: bounce 2s infinite;
         }
-        a{text-decoration:none;}
+        @keyframes bounce {
+            0% { transform: rotate(45deg) translateY(0); }
+            50% { transform: rotate(45deg) translateY(10px); }
+            100% { transform: rotate(45deg) translateY(0); }
+        }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
