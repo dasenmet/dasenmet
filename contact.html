@@ -78,7 +78,8 @@
         }
     </style>
 </head>
-<body id="contact">
+
+<body>
     <div class="container">
         <h1>Dasen Enterprise Ltd</h1>
 
@@ -123,5 +124,25 @@
             © 2026 Dasen Enterprise Ltd. All Rights Reserved.
         </footer>
     </div>
+
+<!-- 🔥 向上滑动自动返回首页核心代码 -->
+<script>
+let touchStartY = 0;
+document.addEventListener('wheel', function(e) {
+    if (e.deltaY < -50 && window.scrollY < 100) {
+        window.location.href = 'index.html';
+    }
+});
+document.addEventListener('touchstart', function(e) {
+    touchStartY = e.touches[0].clientY;
+});
+document.addEventListener('touchend', function(e) {
+    let touchEndY = e.changedTouches[0].clientY;
+    if (touchEndY - touchStartY > 50 && window.scrollY < 100) {
+        window.location.href = 'index.html';
+    }
+});
+</script>
+
 </body>
 </html>
