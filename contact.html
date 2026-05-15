@@ -10,7 +10,7 @@
             font-family: Georgia, "Times New Roman", Times, serif;
             background:#ffffff;
             color:#000;
-            line-height:1.6;
+            line-height:1.5;
             scroll-behavior: smooth;
         }
         .container{
@@ -22,7 +22,7 @@
             font-size:46px;
             font-weight:normal;
             letter-spacing:1px;
-            margin-bottom:40px;
+            margin-bottom:30px;
             text-align:center;
             text-transform:uppercase;
         }
@@ -30,51 +30,76 @@
             font-size:24px;
             font-weight:normal;
             letter-spacing:0.5px;
-            margin:40px 0 15px;
+            margin:30px 0 12px;
             text-transform:uppercase;
             text-align: center;
         }
         p{
             font-size:17px;
-            margin-bottom:8px;
+            margin-bottom:6px;
             letter-spacing:0.3px;
         }
         ul{
             margin-left:30px;
-            margin-bottom:15px;
+            margin-bottom:12px;
         }
         ul li{
             font-size:17px;
-            margin:6px 0;
+            margin:4px 0;
             letter-spacing:0.3px;
             list-style-type: "- ";
         }
         .contact-box{
             margin-top:20px;
-            padding:30px;
-            border:1px solid #000;
+            padding:0;
+            border:none;
         }
-        .offices{
+
+        /*  offices & contact 两列布局 */
+        .offices,
+        .contact-columns {
             display: flex;
             gap: 60px;
-            margin-bottom:15px;
+            margin-bottom:12px;
         }
-        .office{
+        .office,
+        .contact-col {
             flex: 1;
             text-align: left;
         }
-        .office p:last-child{
-            margin-bottom:0;
+
+        /* WhatsApp 样式 */
+        .whatsapp-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .contact-info {
-            text-align: left;
+        .whatsapp-bubble {
+            background: #fff;
+            padding: 6px 14px;
+            border-radius: 50px;
+            border: 2px solid #25D366;
+            font-size:15px;
+            white-space: nowrap;
         }
+        .whatsapp-icon {
+            width: 36px;
+            height: 36px;
+            background: #25D366;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+        }
+        .whatsapp-icon img {
+            width:18px;height:18px;
+        }
+
         footer{
             text-align:center;
             padding:30px 0;
             font-size:14px;
-            margin-top:40px;
-            letter-spacing:0.3px;
+            margin-top:30px;
         }
     </style>
 </head>
@@ -98,6 +123,7 @@
         <div class="contact-box">
             <h2>Contact Us</h2>
             
+            <!-- 办公室 左右两列 -->
             <div class="offices">
                 <div class="office">
                     <p><strong>Shanghai Office</strong></p>
@@ -107,17 +133,28 @@
 
                 <div class="office">
                     <p><strong>Foshan Office</strong></p>
-                    <p>Room 1906, Building 19</p>
-                    <p>No. 13 Desheng Middle Road</p>
+                    <p>Room 1906, Building 19, No. 13 Desheng Middle Road</p>
                     <p>Shunde District, Foshan City, Guangdong Province, China</p>
                 </div>
             </div>
 
-            <div class="contact-info">
-                <p><strong>Mobile / WhatsApp:</strong> +86 13701625910</p>
-                <p><strong>WeChat:</strong> roychengchina</p>
-                <p><strong>Email:</strong> roychengchina@gmail.com</p>
+            <!-- 联系方式 左右两列 → 永远对齐 -->
+            <div class="contact-columns">
+                <div class="contact-col">
+                    <p><strong>Mobile / WhatsApp:</strong> +86 13701625910</p>
+                </div>
+                <div class="contact-col">
+                    <a href="https://wa.me/8613701625910" target="_blank" class="whatsapp-group">
+                        <div class="whatsapp-bubble">Chat with us</div>
+                        <div class="whatsapp-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        </div>
+                    </a>
+                </div>
             </div>
+
+            <p><strong>WeChat:</strong> roychengchina</p>
+            <p><strong>Email:</strong> roychengchina@gmail.com</p>
         </div>
 
         <footer>
@@ -125,20 +162,10 @@
         </footer>
     </div>
 
-<!-- 🔥 向上滑动自动返回首页核心代码 -->
 <script>
 let touchStartY = 0;
 document.addEventListener('wheel', function(e) {
     if (e.deltaY < -50 && window.scrollY < 100) {
-        window.location.href = 'index.html';
-    }
-});
-document.addEventListener('touchstart', function(e) {
-    touchStartY = e.touches[0].clientY;
-});
-document.addEventListener('touchend', function(e) {
-    let touchEndY = e.changedTouches[0].clientY;
-    if (touchEndY - touchStartY > 50 && window.scrollY < 100) {
         window.location.href = 'index.html';
     }
 });
