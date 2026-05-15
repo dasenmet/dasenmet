@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DASEN ENTERPRISE LTD</title>
+    <title>Dasen Enterprise Ltd</title>
     <style>
         * {
             margin: 0;
@@ -11,62 +11,60 @@
             box-sizing: border-box;
         }
         body {
-            /* 🔥 更浅、更柔和的淡黄色 */
-            background: #fff9cc;
-            color: #000;
+            background-color: #F8EDB3;
+            color: #000000;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        .brand-title {
+            font-size: 6vw;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+        .brand-slogan {
+            font-size: 1.2vw;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 80px;
             text-align: center;
         }
-
-        /* 公司名：TT Norms Pro Bold - 60pt */
-        h1 {
-            font-family: "TT Norms Pro", Arial, sans-serif;
-            font-weight: 700;
-            font-size: 60pt;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        .scroll-down {
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-
-        /* 标语：Proxima Nova Regular - 20pt */
-        .subtitle {
-            font-family: "Proxima Nova", Arial, sans-serif;
-            font-weight: 400;
-            font-size: 20pt;
-            max-width: 90%;
-            margin-bottom: 70px;
-            line-height: 1.4;
+        .scroll-down:hover {
+            background-color: rgba(0,0,0,0.05);
         }
-
-        /* 下滑箭头 */
-        .arrow {
-            width: 26px;
-            height: 26px;
-            border-right: 2px solid #000;
-            border-bottom: 2px solid #000;
-            transform: rotate(45deg);
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0% { transform: rotate(45deg) translateY(0); }
-            50% { transform: rotate(45deg) translateY(10px); }
-            100% { transform: rotate(45deg) translateY(0); }
-        }
-
-        a {
-            text-decoration: none;
+        .scroll-down::after {
+            content: "↓";
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <h1>DASEN ENTERPRISE LTD</h1>
-    <p class="subtitle">Global Partner for Sustainable and Secure Supply of Energy Materials</p>
-    <a href="contact.html">
-        <div class="arrow"></div>
-    </a>
+    <h1 class="brand-title">Dasen Enterprise Ltd</h1>
+    <p class="brand-slogan">Leaders in importing & trading battery raw materials worldwide</p>
+    <div class="scroll-down" onclick="window.location.href='contact.html'"></div>
+
+    <script>
+        document.addEventListener('wheel', function(e) {
+            if (e.deltaY > 50) {
+                window.location.href = 'contact.html';
+            }
+        });
+    </script>
 </body>
 </html>
