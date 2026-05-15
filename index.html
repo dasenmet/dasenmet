@@ -3,70 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasen Enterprise Ltd</title>
+    <title>Dasen - About & Contact</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
+        *{margin:0;padding:0;box-sizing:border-box;}
+        /* 雾霾蓝高级底色 + 白色文字 */
+        body{
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
             background-color: #3F5E87;
-            color: #FFFFFF;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            font-family: Helvetica, Arial, sans-serif;
+            color:#FFFFFF;
+            line-height:1.5;
+            scroll-behavior: smooth;
         }
-        .brand-title {
-            font-size: 6vw;
+        /* 顶部标题栏 */
+        .top-header {
+            background-color: #3F5E87;
+            padding: 12px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 20px;
+        }
+        .top-header h1 {
+            font-size: 32px;
             font-weight: 900;
             letter-spacing: 2px;
-            margin-bottom: 24px;
+            text-transform: uppercase;
         }
-        /* 副标题加大两号 */
-        .brand-slogan {
-            font-size: 1.8vw;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin-bottom: 80px;
-            text-align: center;
+        .container{
+            max-width: 900px;
+            margin:0 auto;
+            padding: 12px 30px;
         }
-        .scroll-down {
-            width: 40px;
-            height: 40px;
-            border: 1.5px solid #FFFFFF;
-            border-radius: 50%;
+        h2{
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 8px;
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+            text-align: justify;
+        }
+        ul{
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+        ul li{
+            font-size: 16px;
+            margin: 4px 0;
+            letter-spacing: 0.3px;
+            list-style-type: disc;
+        }
+        /* 联系方式区域 */
+        .contact-box {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        .offices{
             display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            gap: 40px;
+            margin-bottom: 10px;
         }
-        .scroll-down:hover {
-            background-color: rgba(255,255,255,0.1);
+        .office{
+            flex: 1;
         }
-        .scroll-down::after {
-            content: "↓";
-            font-size: 18px;
-            color: #FFFFFF;
+        footer{
+            text-align:center;
+            padding:20px 0;
+            font-size:14px;
+            margin-top:30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .offices {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
-<body>
-    <h1 class="brand-title">Dasen Enterprise Ltd</h1>
-    <p class="brand-slogan">Leaders in importing & trading battery raw materials worldwide</p>
-    <div class="scroll-down" onclick="window.location.href='contact.html'"></div>
 
-    <script>
-        document.addEventListener('wheel', function(e) {
-            if (e.deltaY > 50) {
-                window.location.href = 'contact.html';
-            }
-        });
-    </script>
+<body>
+    <!-- 顶部标题 -->
+    <div class="top-header">
+        <h1>DASEN</h1>
+    </div>
+
+    <div class="container">
+        <!-- 仅保留 About Us 全屏内容 -->
+        <h2>About Us</h2>
+        <p>Incepted in 2014, Dasen is one of the leading manufacturers, traders and suppliers of textile auxiliaries in China. Having cultivated decades‑long expertise within the textile chemical sector, Dasen has strategically diversified its operations into the battery materials and new‑energy chemicals sectors.</p>
+        
+        <p>We seek to build a sustainable and secure supply chain for critical battery raw materials. These include:</p>
+        <ul>
+            <li>Nickel concentrate, nickel matte, nickel/cobalt mixed hydroxide precipitate (MHP) and nickel sulphate</li>
+            <li>Cobalt ores and concentrates, cobalt hydroxide, cobalt sulphate</li>
+            <li>Primary materials containing lithium, graphite and cobalt</li>
+            <li>Other concentrates, intermediate products and by‑products containing cobalt, nickel and lithium</li>
+        </ul>
+        
+        <p>We transact these critical battery raw materials, delivering consistent feedstock to global smelters. As a principal, we source materials for processing at partner facilities. We identify strategic value‑optimization opportunities for miners and metal‑bearing producers to maximize returns from their mineral outputs.</p>
+        
+        <p>We cooperate with independent third‑party representatives to implement standard weighing, sampling and moisture‑testing procedures for risk mitigation, which has earned us widespread recognition and trust from global clients.</p>
+        
+        <p>We are continuously advancing under the expert guidance of our experienced management team. Backed by a well‑trained team of professionals, we strengthen our core competence to reliably fulfil orders for critical battery raw materials.</p>
+
+        <!-- Contact Us 保留不变 -->
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <div class="offices">
+                <div class="office">
+                    <p><strong>Shanghai Office</strong></p>
+                    <p>No. 5, Lane 500, Wanding Road</p>
+                    <p>Minhang District, Shanghai, China</p>
+                </div>
+                <div class="office">
+                    <p><strong>Foshan Office</strong></p>
+                    <p>Room 1906, Building 19, No. 13 Desheng Middle Road</p>
+                    <p>Shunde District, Foshan City, Guangdong Province, China</p>
+                </div>
+            </div>
+            <p><strong>Mobile / WhatsApp:</strong> +86 13701625910</p>
+            <p><strong>WeChat:</strong> roychengchina</p>
+            <p><strong>Email:</strong> roychengchina@gmail.com</p>
+        </div>
+
+        <footer>
+            © 2026 DASEN. All Rights Reserved.
+        </footer>
+    </div>
+
+<!-- 上滑返回首页 -->
+<script>
+let touchStartY = 0;
+document.addEventListener('wheel', function(e) {
+    if (e.deltaY < -50 && window.scrollY < 100) {
+        window.location.href = 'index.html';
+    }
+});
+</script>
+
 </body>
 </html>
