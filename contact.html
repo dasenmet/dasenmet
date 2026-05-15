@@ -3,79 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasen Enterprise Ltd - About & Contact</title>
+    <title>Dasen - About & Contact</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
         body{
-            font-family: Georgia, "Times New Roman", Times, serif;
-            background:#ffffff;
-            color:#000;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            background-color: #3F5E87;
+            color:#FFFFFF;
             line-height:1.4;
             scroll-behavior: smooth;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .top-header {
+            padding: 8px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 12px;
+        }
+        .top-header h1 {
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         .container{
-            max-width: 1200px;
+            max-width: 900px;
             margin:0 auto;
-            padding: 12px 30px;
-        }
-        h1{
-            font-size:38px;
-            font-weight:normal;
-            letter-spacing:1px;
-            margin-bottom:12px;
-            text-align:center;
-            text-transform:uppercase;
+            padding: 8px 26px;
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         h2{
-            font-size:20px;
-            font-weight:normal;
-            letter-spacing:0.5px;
-            margin:12px 0 6px;
-            text-transform:uppercase;
-            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin: 0 0 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 6px;
         }
         p{
-            font-size:15px;
-            margin-bottom:10px;
-            letter-spacing:0.3px;
+            font-size: 15px;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+            text-align: justify;
         }
         ul{
-            margin-left:30px;
-            margin:6px 0 10px 30px;
+            margin-left: 20px;
+            margin-bottom: 12px;
         }
         ul li{
-            font-size:15px;
-            margin:2px 0;
-            letter-spacing:0.3px;
-            list-style-type: "- ";
+            font-size: 15px;
+            margin: 3px 0;
+            letter-spacing: 0.2px;
+            list-style-type: disc;
         }
-        .contact-box{
-            margin-top:6px;
-            padding:0;
-            border:none;
+        /* Contact Us 区域行距紧凑 */
+        .contact-box {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255,255,255,0.2);
         }
+        /* 两大办公区间距拉大，排版更和谐 */
         .offices{
             display: flex;
-            gap: 40px;
-            margin-bottom:6px;
+            justify-content: space-between;
+            gap: 80px;
+            margin-bottom: 6px;
         }
-        .office{
-            flex: 1;
-            text-align: left;
+        .office p {
+            margin-bottom: 4px;
         }
         footer{
             text-align:center;
-            padding:10px 0;
+            padding:10px 0 0;
             font-size:13px;
-            margin-top:10px;
+            margin-top:12px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        @media (max-width: 768px) {
+            .offices {
+                flex-direction: column;
+                gap: 8px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Dasen Enterprise Ltd</h1>
+    <div class="top-header">
+        <h1>DASEN</h1>
+    </div>
 
+    <div class="container">
         <h2>About Us</h2>
         <p>Incepted in 2014, Dasen is one of the leading manufacturers, traders and suppliers of textile auxiliaries in China. Having cultivated decades‑long expertise within the textile chemical sector, Dasen has strategically diversified its operations into the battery materials and new‑energy chemicals sectors.</p>
         
@@ -83,7 +105,7 @@
         <ul>
             <li>Nickel concentrate, nickel matte, nickel/cobalt mixed hydroxide precipitate (MHP) and nickel sulphate</li>
             <li>Cobalt ores and concentrates, cobalt hydroxide, cobalt sulphate</li>
-            <li>Primary materials containing lithium,Lithium Carbonate,Lithium Sulfate,Lithium hydroxide</li>
+            <li>Primary materials containing lithium, graphite and cobalt</li>
             <li>Other concentrates, intermediate products and by‑products containing cobalt, nickel and lithium</li>
         </ul>
         
@@ -113,18 +135,20 @@
         </div>
 
         <footer>
-            © 2026 Dasen Enterprise Ltd. All Rights Reserved.
+            © 2026 DASEN. All Rights Reserved.
         </footer>
     </div>
 
 <script>
-let touchStartY = 0;
 document.addEventListener('wheel', function(e) {
     if (e.deltaY < -50 && window.scrollY < 100) {
         window.location.href = 'index.html';
     }
 });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
