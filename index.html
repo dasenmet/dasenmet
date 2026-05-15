@@ -20,21 +20,23 @@
             align-items: center;
             overflow: hidden;
             font-family: Helvetica, Arial, sans-serif;
+            padding: 0 20px;
         }
-        /* 标题字体缩小一号 */
         .brand-title {
-            font-size: 5vw;
+            font-size: clamp(32px, 8vw, 70px);
             font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 24px;
-        }
-        /* 副标题字体缩小一号 */
-        .brand-slogan {
-            font-size: 1.5vw;
-            font-weight: 400;
             letter-spacing: 1px;
-            margin-bottom: 80px;
+            margin-bottom: 20px;
             text-align: center;
+        }
+        .brand-slogan {
+            font-size: clamp(14px, 3vw, 20px);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin-bottom: 60px;
+            text-align: center;
+            max-width: 800px;
+            line-height: 1.4;
         }
         .scroll-down {
             width: 40px;
@@ -45,10 +47,6 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .scroll-down:hover {
-            background-color: rgba(255,255,255,0.1);
         }
         .scroll-down::after {
             content: "↓";
