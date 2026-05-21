@@ -74,23 +74,8 @@
             margin-bottom: 4px;
             font-size: clamp(15px, 3.5vw, 17px);
         }
-        a {
-            color: #ffffff;
-            text-decoration: none;
-            font-family: inherit;
-            font-size: inherit;
-        }
-        .contact-flex {
-            display: flex;
-            margin-top: 4px;
-        }
-        .contact-left {
-            flex: 1;
-            min-width: 260px;
-        }
-        .contact-right {
-            flex: 1;
-            min-width: 260px;
+        .url-underline {
+            text-decoration: underline;
         }
         footer{
             text-align:center;
@@ -108,10 +93,6 @@
             .offices {
                 flex-direction: column;
                 gap: 15px;
-            }
-            .contact-flex {
-                flex-direction: column;
-                gap: 0;
             }
         }
     </style>
@@ -155,15 +136,15 @@
                 </div>
             </div>
 
-            <div class="contact-flex">
-                <div class="contact-left">
+            <div style="display:flex;gap:30px;flex-wrap:wrap;">
+                <div style="flex:1;min-width:260px;">
                     <p><strong>Mobile / WhatsApp:</strong> +86 13701625910</p>
                     <p><strong>WeChat:</strong> roychengchina</p>
                     <p><strong>Email:</strong> roychengchina@gmail.com</p>
                 </div>
-                <div class="contact-right">
+                <div style="flex:1;min-width:260px;">
                     <p>&nbsp;</p>
-                    <p><a href="https://www.dasench.com" target="_blank">For Textile Auxiliaries Business, Please Visit www.dasenchem.com</a></p>
+                    <p>For Textile Auxiliaries Business, Please Visit <a href="https://www.dasenchem.com" target="_blank" style="color:#fff;text-decoration:underline;">www.dasenchem.com</a></p>
                     <p>&nbsp;</p>
                 </div>
             </div>
@@ -181,6 +162,5 @@ document.addEventListener('wheel', function(e) {
     }
 });
 </script>
-
 </body>
 </html>
