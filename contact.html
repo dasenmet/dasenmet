@@ -43,7 +43,7 @@
         }
         p{
             font-size: clamp(15px, 3.5vw, 17px);
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             text-align: justify;
         }
         ul{
@@ -64,7 +64,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 30px;
-            margin-bottom: 6px;
+            margin-bottom: 0;
         }
         .office {
             flex: 1;
@@ -73,6 +73,24 @@
         .office p {
             margin-bottom: 4px;
             font-size: clamp(15px, 3.5vw, 17px);
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .contact-flex {
+            display: flex;
+            margin-top: 4px;
+        }
+        .contact-left {
+            flex: 1;
+            min-width: 260px;
+        }
+        .contact-right {
+            flex: 1;
+            min-width: 260px;
         }
         footer{
             text-align:center;
@@ -90,6 +108,10 @@
             .offices {
                 flex-direction: column;
                 gap: 15px;
+            }
+            .contact-flex {
+                flex-direction: column;
+                gap: 0;
             }
         }
     </style>
@@ -109,7 +131,7 @@
             <li>Nickel concentrate, nickel matte, nickel/cobalt mixed hydroxide precipitate (MHP) and nickel sulphate</li>
             <li>Cobalt ores and concentrates, cobalt hydroxide, cobalt sulphate</li>
             <li>Primary materials containing lithium,lithium carbonate, lithium sulphate, lithium hydroxide.</li>
-            <li>Other concentrates, intermediate products and by‑products containing cobalt, nickel and lithium</li>
+            <li>Other concentrates, intermediate products and by‑products containing cobalt, nickel and lithium,secondary materials such as black mass.</li>
         </ul>
         
         <p>We transact these critical battery raw materials, delivering consistent feedstock to global smelters. As a principal, we source materials for processing at partner facilities. We identify strategic value‑optimization opportunities for miners and metal‑bearing producers to maximize returns from their mineral outputs.</p>
@@ -132,9 +154,19 @@
                     <p>Shunde District, Foshan City, Guangdong Province, China</p>
                 </div>
             </div>
-            <p><strong>Mobile / WhatsApp:</strong> +86 13701625910</p>
-            <p><strong>WeChat:</strong> roychengchina</p>
-            <p><strong>Email:</strong> roychengchina@gmail.com</p>
+
+            <div class="contact-flex">
+                <div class="contact-left">
+                    <p><strong>Mobile / WhatsApp:</strong> +86 13701625910</p>
+                    <p><strong>WeChat:</strong> roychengchina</p>
+                    <p><strong>Email:</strong> roychengchina@gmail.com</p>
+                </div>
+                <div class="contact-right">
+                    <p>&nbsp;</p>
+                    <p><a href="https://www.dasench.com" target="_blank">For Textile Auxiliaries Business, Please Visit www.dasench.com</a></p>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
         </div>
 
         <footer>
